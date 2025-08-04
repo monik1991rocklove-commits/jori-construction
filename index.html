@@ -1,202 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jori Construction</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
+  <title>Jori Construction - Construcción Profesional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    /* Reset básico */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
       font-family: 'Montserrat', sans-serif;
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 1rem 2rem;
-      background-color: #f0f4f8;
+      margin: 0;
+      background: #f5f5f5;
       color: #333;
-      line-height: 1.6;
     }
-
-    nav {
-      background: #007acc;
+    header {
+      background: #00457c;
+      color: white;
       padding: 1rem 2rem;
-      border-radius: 8px;
-      margin-bottom: 2rem;
       display: flex;
-      justify-content: center;
-      gap: 2rem;
+      justify-content: space-between;
+      align-items: center;
     }
-
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+    }
     nav a {
       color: white;
       text-decoration: none;
-      font-weight: 700;
-      font-size: 1.1rem;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #ffb300;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    header h1 {
-      color: #007acc;
-      font-weight: 700;
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-style: italic;
-      color: #555;
-    }
-
-    section {
-      background: white;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      border-radius: 8px;
-    }
-
-    h2 {
-      color: #005f99;
-      margin-bottom: 1rem;
-      font-size: 1.8rem;
-      border-bottom: 2px solid #007acc;
-      padding-bottom: 0.3rem;
-    }
-
-    ul {
-      list-style: inside disc;
-      margin-left: 1rem;
-      color: #444;
-      font-weight: 500;
-    }
-
-    a {
-      color: #007acc;
-      text-decoration: none;
+      margin-left: 1.5rem;
       font-weight: 600;
     }
-    a:hover {
+    nav a:hover {
       text-decoration: underline;
-      color: #ffb300;
     }
-
+    .hero {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.5rem;
+      max-width: 600px;
+      margin: 0 auto;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    }
+    section {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    h2.section-title {
+      color: #00457c;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 700;
+    }
+    .services {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .service-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      flex: 1 1 250px;
+      text-align: center;
+    }
+    .service-card h3 {
+      color: #007acc;
+      margin-bottom: 1rem;
+    }
+    .testimonials {
+      background: #00457c;
+      color: white;
+      padding: 2rem 1rem;
+      border-radius: 8px;
+    }
+    .testimonial {
+      max-width: 600px;
+      margin: 1rem auto;
+      font-style: italic;
+    }
     footer {
       text-align: center;
-      font-size: 0.9rem;
-      color: #777;
-      margin-top: 3rem;
-      padding-top: 1rem;
-      border-top: 1px solid #ddd;
-    }
-
-    /* Responsividad */
-    @media (max-width: 600px) {
-      body {
-        padding: 1rem;
-        max-width: 100%;
-      }
-      nav {
-        flex-direction: column;
-        gap: 1rem;
-      }
-    }
-
-    /* Botón */
-    .btn {
-      display: inline-block;
-      background-color: #007acc;
+      padding: 1.5rem;
+      background: #222;
       color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: 5px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      text-decoration: none;
-      margin-top: 1rem;
+      margin-top: 3rem;
     }
-    .btn:hover {
-      background-color: #005f99;
-    }
-
-    /* Formulario simple */
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    input, textarea {
-      padding: 0.8rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1rem;
-    }
-    textarea {
-      resize: vertical;
-      min-height: 100px;
+    @media (max-width: 600px) {
+      .services {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
   <header>
     <h1>Jori Construction</h1>
-    <p>Building, Renovation & Repair Services in Jyväskylä, Finland</p>
+    <nav>
+      <a href="#services">Servicios</a>
+      <a href="#testimonials">Testimonios</a>
+      <a href="#contact">Contacto</a>
+    </nav>
   </header>
 
-  <main>
-    <section id="about">
-      <h2>About</h2>
-      <p>Hi! I'm Jori, a professional builder with experience in residential renovations, carpentry, and repair work. I’m based in Jyväskylä and offer high-quality, reliable services. Whether you need a small repair or a full renovation, I am here to help.</p>
-    </section>
+  <section class="hero">
+    <div>
+      <h2>Construimos tus sueños</h2>
+      <p>Servicios profesionales de construcción, renovación y reparación en Jyväskylä, Finlandia.</p>
+    </div>
+  </section>
 
-    <section id="services">
-      <h2>Services</h2>
-      <ul>
-        <li>Residential Renovations</li>
-        <li>Carpentry and Woodwork</li>
-        <li>Home Repair and Maintenance</li>
-        <li>Custom Furniture Building</li>
-      </ul>
-    </section>
+  <section id="services">
+    <h2 class="section-title">Nuestros Servicios</h2>
+    <div class="services">
+      <div class="service-card">
+        <h3>Renovaciones Residenciales</h3>
+        <p>Transformamos tu hogar con renovaciones personalizadas y de calidad.</p>
+      </div>
+      <div class="service-card">
+        <h3>Carpintería</h3>
+        <p>Construcción y reparación de muebles y estructuras en madera.</p>
+      </div>
+      <div class="service-card">
+        <h3>Mantenimiento y Reparaciones</h3>
+        <p>Soluciones rápidas y efectivas para mantener tu casa impecable.</p>
+      </div>
+      <div class="service-card">
+        <h3>Diseño a Medida</h3>
+        <p>Creamos muebles personalizados que se adaptan a tu estilo.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:jori@example.com">jori@example.com</a></p>
-      <p>Phone: <a href="tel:+358401234567">+358 40 1234567</a></p>
+  <section id="testimonials" class="testimonials">
+    <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+    <blockquote class="testimonial">
+      "Jori Construction renovó nuestra casa y quedamos encantados con la calidad y puntualidad."
+      <br>— María Pérez
+    </blockquote>
+    <blockquote class="testimonial">
+      "Trabajo profesional y atención excelente, muy recomendable."
+      <br>— Antti Laine
+    </blockquote>
+  </section>
 
-      <h3>Send me a message</h3>
-      <form action="mailto:jori@example.com" method="POST" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button class="btn" type="submit">Send</button>
-      </form>
-    </section>
-  </main>
+  <section id="contact">
+    <h2 class="section-title">Contacto</h2>
+    <p style="text-align:center;">
+      Email: <a href="mailto:jori@example.com">jori@example.com</a><br />
+      Teléfono: <a href="tel:+358401234567">+358 40 1234567</a>
+    </p>
+  </section>
 
   <footer>
-    &copy; 2025 Jori Construction. All rights reserved.
+    &copy; 2025 Jori Construction. Todos los derechos reservados.
   </footer>
 </body>
 </html>
+
