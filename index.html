@@ -1,130 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jori Construction</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 1rem 2rem;
-      background-color: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      text-align: center;
-      padding-bottom: 1rem;
-      border-bottom: 3px solid #007acc;
-      margin-bottom: 2rem;
-    }
-    h1 {
-      color: #007acc;
-      margin-bottom: 0.3rem;
-      font-size: 2.5rem;
-    }
-    h2 {
-      color: #005f99;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #007acc;
-      padding-bottom: 0.3rem;
-    }
-    section {
-      background: white;
-      padding: 2rem 2.5rem;
-      margin-bottom: 2.5rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      border-radius: 10px;
-    }
-    ul {
-      list-style-type: disc;
-      margin-left: 1.5rem;
-    }
-    a {
-      color: #007acc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #777;
-      margin-top: 3rem;
-      padding-top: 1rem;
-      border-top: 1px solid #ddd;
-    }
-    .testimonials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-      gap: 1.8rem;
-    }
-    .testimonial {
-      background: #e6f0fa;
-      border-left: 6px solid #007acc;
-      padding: 1rem 1.5rem;
-      border-radius: 6px;
-      font-style: italic;
-    }
-    .testimonial strong {
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jori Construction</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 1000px;
+    margin: 2rem auto;
+    background: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+  }
+  header {
+    background: #004080;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  nav {
+    margin-top: 1rem;
+  }
+  nav a {
+    color: #cce6ff;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  section {
+    background: white;
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+  h2 {
+    color: #004080;
+    margin-bottom: 1rem;
+  }
+  ul.services-list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 1rem;
+  }
+  ul.services-list li {
+    background: #e6f0ff;
+    padding: 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+  }
+  .testimonial {
+    font-style: italic;
+    margin: 1rem 0;
+    border-left: 4px solid #004080;
+    padding-left: 1rem;
+    color: #555;
+  }
+  .contact-info a {
+    color: #004080;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+    border-top: 1px solid #ddd;
+  }
+  @media (max-width: 600px) {
+    nav a {
       display: block;
-      margin-top: 0.8rem;
-      font-style: normal;
-      color: #005f99;
+      margin: 0.5rem 0;
     }
-  </style>
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>Jori Construction</h1>
-    <p>Building, Renovation & Repair Services in Jyväskylä, Finland</p>
-  </header>
+<header>
+  <h1>Jori Construction</h1>
+  <nav>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <section>
-    <h2>About Us</h2>
-    <p>Hello! I'm Jori, a professional builder with extensive experience in residential renovations, carpentry, and repair work. Based in Jyväskylä, I pride myself on delivering high-quality, reliable services tailored to your needs. Whether it’s a minor repair or a full home renovation, I am ready to help.</p>
-  </section>
+<section id="about">
+  <h2>About Us</h2>
+  <p>At Jori Construction, we bring years of expertise in residential renovations, custom carpentry, and home repairs. Located in Jyväskylä, Finland, our mission is to deliver reliable, high-quality workmanship tailored to your needs.</p>
+  <p>From small fixes to full-scale remodeling, our team is dedicated to making your vision a reality.</p>
+</section>
 
-  <section>
-    <h2>Services</h2>
-    <ul>
-      <li>Residential Renovations</li>
-      <li>Custom Carpentry and Woodwork</li>
-      <li>Home Repair and Maintenance</li>
-      <li>Custom Furniture Building</li>
-    </ul>
-  </section>
+<section id="services">
+  <h2>Our Services</h2>
+  <ul class="services-list">
+    <li>Home Renovations & Remodeling</li>
+    <li>Custom Carpentry & Woodwork</li>
+    <li>Maintenance & Repairs</li>
+    <li>Furniture Design & Build</li>
+  </ul>
+</section>
 
-  <section>
-    <h2>Client Testimonials</h2>
-    <div class="testimonials">
-      <div class="testimonial">
-        "Jori transformed our kitchen beyond expectations! Professional and timely service."
-        <strong>- Emma K.</strong>
-      </div>
-      <div class="testimonial">
-        "Reliable, skilled, and communicative throughout our renovation project. Highly recommended."
-        <strong>- Mark L.</strong>
-      </div>
-      <div class="testimonial">
-        "Excellent craftsmanship and attention to detail. We love our new custom furniture!"
-        <strong>- Sofia T.</strong>
-      </div>
-    </div>
-  </section>
+<section id="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial">
+    “Jori Construction transformed our kitchen beautifully and completed the project ahead of schedule. Highly recommend!” – Anna K.
+  </div>
+  <div class="testimonial">
+    “Reliable, professional, and skilled. Our new custom furniture is exactly what we wanted.” – Mark L.
+  </div>
+  <div class="testimonial">
+    “Fast response, great communication, and excellent craftsmanship. Will use again.” – Emma T.
+  </div>
+</section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:jori@example.com">jori@example.com</a></p>
-    <p>Phone: <a href="tel:+358401234567">+358 40 1234567</a></p>
-  </section>
+<section id="contact">
+  <h2>Get in Touch</h2>
+  <p class="contact-info">Email: <a href="mailto:jori@example.com">jori@example.com</a></p>
+  <p class="contact-info">Phone: <a href="tel:+358401234567">+358 40 1234567</a></p>
+</section>
 
-  <footer>
-    &copy; 2025 Jori Construction. All rights reserved.
-  </footer>
+<footer>
+  &copy; 2025 Jori Construction. All rights reserved.
+</footer>
 </body>
 </html>
-
