@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      max-width: 800px;
+      max-width: 900px;
       margin: 2rem auto;
       padding: 1rem 2rem;
       background-color: #f9f9f9;
@@ -17,23 +17,30 @@
     header {
       text-align: center;
       padding-bottom: 1rem;
-      border-bottom: 2px solid #007acc;
+      border-bottom: 3px solid #007acc;
       margin-bottom: 2rem;
     }
     h1 {
       color: #007acc;
       margin-bottom: 0.3rem;
-    }
-    section {
-      background: white;
-      padding: 1.5rem 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      border-radius: 8px;
+      font-size: 2.5rem;
     }
     h2 {
       color: #005f99;
       margin-bottom: 1rem;
+      border-bottom: 2px solid #007acc;
+      padding-bottom: 0.3rem;
+    }
+    section {
+      background: white;
+      padding: 2rem 2.5rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
     }
     a {
       color: #007acc;
@@ -50,6 +57,24 @@
       padding-top: 1rem;
       border-top: 1px solid #ddd;
     }
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 1.8rem;
+    }
+    .testimonial {
+      background: #e6f0fa;
+      border-left: 6px solid #007acc;
+      padding: 1rem 1.5rem;
+      border-radius: 6px;
+      font-style: italic;
+    }
+    .testimonial strong {
+      display: block;
+      margin-top: 0.8rem;
+      font-style: normal;
+      color: #005f99;
+    }
   </style>
 </head>
 <body>
@@ -59,18 +84,36 @@
   </header>
 
   <section>
-    <h2>About</h2>
-    <p>Hello! I'm Jori, a professional builder with extensive experience in residential renovations, carpentry, and repair work. I’m based in Jyväskylä and committed to providing high-quality, reliable services. Whether you need a small repair or a full renovation, I am here to help.</p>
+    <h2>About Us</h2>
+    <p>Hello! I'm Jori, a professional builder with extensive experience in residential renovations, carpentry, and repair work. Based in Jyväskylä, I pride myself on delivering high-quality, reliable services tailored to your needs. Whether it’s a minor repair or a full home renovation, I am ready to help.</p>
   </section>
 
   <section>
     <h2>Services</h2>
     <ul>
       <li>Residential Renovations</li>
-      <li>Carpentry and Woodwork</li>
+      <li>Custom Carpentry and Woodwork</li>
       <li>Home Repair and Maintenance</li>
       <li>Custom Furniture Building</li>
     </ul>
+  </section>
+
+  <section>
+    <h2>Client Testimonials</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        "Jori transformed our kitchen beyond expectations! Professional and timely service."
+        <strong>- Emma K.</strong>
+      </div>
+      <div class="testimonial">
+        "Reliable, skilled, and communicative throughout our renovation project. Highly recommended."
+        <strong>- Mark L.</strong>
+      </div>
+      <div class="testimonial">
+        "Excellent craftsmanship and attention to detail. We love our new custom furniture!"
+        <strong>- Sofia T.</strong>
+      </div>
+    </div>
   </section>
 
   <section>
@@ -84,3 +127,4 @@
   </footer>
 </body>
 </html>
+
