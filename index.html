@@ -1,146 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Jori Construction</title>
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    max-width: 1000px;
-    margin: 2rem auto;
-    background: #121212; /* fondo negro */
-    color: #e0e0e0; /* texto claro */
-    line-height: 1.6;
-  }
-  header {
-    background: #004080; /* azul oscuro */
-    color: white;
-    padding: 2rem 1rem;
-    text-align: center;
-    border-radius: 8px;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-  }
-  nav {
-    margin-top: 1rem;
-  }
-  nav a {
-    color: #66ccff; /* azul celeste claro */
-    margin: 0 1rem;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  nav a:hover {
-    text-decoration: underline;
-  }
-  section {
-    background: #1e1e1e; /* gris muy oscuro para secciones */
-    margin: 2rem 0;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.8);
-  }
-  h2 {
-    color: #66ccff; /* azul celeste */
-    margin-bottom: 1rem;
-  }
-  ul.services-list {
-    list-style: none;
-    padding-left: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-    gap: 1rem;
-  }
-  ul.services-list li {
-    background: #003366; /* azul muy oscuro */
-    padding: 1rem;
-    border-radius: 6px;
-    font-weight: 600;
-    color: #cce6ff; /* texto claro */
-  }
-  .testimonial {
-    font-style: italic;
-    margin: 1rem 0;
-    border-left: 4px solid #66ccff;
-    padding-left: 1rem;
-    color: #bbb; /* gris claro */
-  }
-  .contact-info a {
-    color: #66ccff;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  .contact-info a:hover {
-    text-decoration: underline;
-  }
-  footer {
-    text-align: center;
-    margin-top: 3rem;
-    padding: 1rem;
-    font-size: 0.9rem;
-    color: #999;
-    border-top: 1px solid #333;
-  }
-  @media (max-width: 600px) {
-    nav a {
-      display: block;
-      margin: 0.5rem 0;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>go.arch - Modern Architecture</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-  }
-</style>
 
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #111;
+      color: #eee;
+      line-height: 1.6;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    header a.button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background: #d2a06b;
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 25px;
+      transition: background 0.3s ease;
+    }
+
+    header a.button:hover {
+      background: #b07e4b;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .about, .clients, .contact {
+      background-color: #1a1a1a;
+      margin: 2rem 0;
+      border-radius: 10px;
+      padding: 2rem;
+    }
+
+    .about h2, .clients h2, .contact h2 {
+      color: #d2a06b;
+      margin-bottom: 1rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background-color: #222;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .project-card img {
+      width: 100%;
+      display: block;
+    }
+
+    .project-card h3 {
+      padding: 1rem;
+      font-size: 1.1rem;
+      color: #d2a06b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 5px;
+      background: #333;
+      color: #fff;
+    }
+
+    form textarea {
+      grid-column: span 2;
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    form button {
+      grid-column: span 2;
+      padding: 0.75rem;
+      background: #d2a06b;
+      color: #111;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    form button:hover {
+      background: #b07e4b;
+    }
+  </style>
 </head>
 <body>
-<header>
-  <h1>Jori Construction</h1>
-  <nav>
-    <a href="#about">About Us</a>
-    <a href="#services">Services</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <header>
+    <h1>Concert Hall in New York</h1>
+    <p>Concert Hall is the architecture of a new generation. A building that exists not only in space but also in the dimension of time and communication.</p>
+    <a href="#projects" class="button">Look More</a>
+  </header>
 
-<section id="about">
-  <h2>About Us</h2>
-  <p>At Jori Construction, we bring years of expertise in residential renovations, custom carpentry, and home repairs. Located in Jyväskylä, Finland, our mission is to deliver reliable, high-quality workmanship tailored to your needs.</p>
-  <p>From small fixes to full-scale remodeling, our team is dedicated to making your vision a reality.</p>
-</section>
+  <section class="about">
+    <h2>About go.arch</h2>
+    <p>We turn ideas into works of art. Each project is an opportunity to create added value through collaboration, innovation, and architectural excellence. Our specialization includes Architecture, Interiors, and Planning.</p>
+  </section>
 
-<section id="services">
-  <h2>Our Services</h2>
-  <ul class="services-list">
-    <li>Home Renovations & Remodeling</li>
-    <li>Custom Carpentry & Woodwork</li>
-    <li>Maintenance & Repairs</li>
-    <li>Furniture Design & Build</li>
-  </ul>
-</section>
+  <section id="projects">
+    <h2 style="color:#d2a06b; margin-bottom:2rem;">Our Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <img src="https://source.unsplash.com/400x300/?architecture" alt="Project 1">
+        <h3>Residential Care Project in Paris</h3>
+      </div>
+      <div class="project-card">
+        <img src="https://source.unsplash.com/400x301/?interior" alt="Project 2">
+        <h3>Modern Hotel in London</h3>
+      </div>
+      <div class="project-card">
+        <img src="https://source.unsplash.com/400x302/?building" alt="Project 3">
+        <h3>Concert Hall in New York</h3>
+      </div>
+    </div>
+  </section>
 
-<section id="testimonials">
-  <h2>What Our Clients Say</h2>
-  <div class="testimonial">
-    “Jori Construction transformed our kitchen beautifully and completed the project ahead of schedule. Highly recommend!” – Anna K.
-  </div>
-  <div class="testimonial">
-    “Reliable, professional, and skilled. Our new custom furniture is exactly what we wanted.” – Mark L.
-  </div>
-  <div class="testimonial">
-    “Fast response, great communication, and excellent craftsmanship. Will use again.” – Emma T.
-  </div>
-</section>
+  <section class="clients">
+    <h2>Our Clients</h2>
+    <p>Johnson Bank, Metropol, and more...</p>
+  </section>
 
-<section id="contact">
-  <h2>Get in Touch</h2>
-  <p class="contact-info">Email: <a href="mailto:jori@example.com">jori@example.com</a></p>
-  <p class="contact-info">Phone: <a href="tel:+358401234567">+358 40 1234567</a></p>
-</section>
+  <section class="contact">
+    <h2>Get In Touch</h2>
+    <form>
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="text" placeholder="Phone" />
+      <input type="text" placeholder="Company" />
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
 
-<footer>
-  &copy; 2025 Jori Construction. All rights reserved.
-</footer>
+  <footer>
+    &copy; 2025 go.arch. All rights reserved.
+  </footer>
 </body>
 </html>
