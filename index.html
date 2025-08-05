@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>go.arch - Modern Architecture</title>
+  <title>go.arch - Arquitectura Moderna</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -20,7 +20,7 @@
     }
 
     header {
-      background: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29') center/cover no-repeat;
+      background: url('https://www.turismofinlandia.es/asuntomessut-feria-vivienda-finlandia-housing-fair/') center/cover no-repeat;
       height: 100vh;
       display: flex;
       flex-direction: column;
@@ -145,78 +145,55 @@
 </head>
 <body>
   <header>
-    <h1>Jori Haka — Skilled Carpenter & Construction Specialist</h1>
-    <p>Delivering quality craftsmanship and innovative solutions in building and renovation projects, with experience in Finland and abroad.</p>
-    <a href="#projects" class="button">Look More</a>
+    <h1>Jori Haka — Carpintero y Especialista en Construcción</h1>
+    <p>Brindando artesanía de calidad y soluciones innovadoras en proyectos de construcción y renovación, con experiencia en Finlandia y en el extranjero.</p>
+    <a href="#projects" class="button">Ver Más</a>
   </header>
 
   <section class="about">
-    <h2>About Jori Haka</h2>
-    <p>With over ten years of hands-on experience in construction, carpentry, and home repairs, Jori Haka is a dedicated professional committed to transforming spaces with quality and precision. From small repairs to full renovations, Jori provides reliable solutions that ensure the durability and functionality of every project.</p>
-    <p>Expert in maintenance, finishing, and remodeling, he works with great attention to detail and adaptability, responding to the specific needs of each client. His approach combines traditional techniques with modern methods to deliver efficient and long-lasting results.</p>
-    <p>With experience in Finland and Malta, and fluent communication in Finnish, English, and Spanish, Jori is the ideal partner for any construction or repair work in your home.</p>
+    <h2>Sobre Jori Haka</h2>
+    <p>Con más de diez años de experiencia práctica en construcción, carpintería y reparaciones en el hogar, Jori Haka es un profesional dedicado comprometido a transformar espacios con calidad y precisión. Desde pequeñas reparaciones hasta renovaciones completas, Jori ofrece soluciones confiables que garantizan la durabilidad y funcionalidad de cada proyecto.</p>
+    <p>Experto en mantenimiento, acabado y remodelación, trabaja con gran atención al detalle y adaptabilidad, respondiendo a las necesidades específicas de cada cliente. Su enfoque combina técnicas tradicionales con métodos modernos para ofrecer resultados eficientes y duraderos.</p>
+    <p>Con experiencia en Finlandia y Malta, y comunicación fluida en finlandés, inglés y español, Jori es el socio ideal para cualquier trabajo de construcción o reparación en su hogar.</p>
   </section>
 
   <section id="projects">
-    <h2 style="color:#d2a06b; margin-bottom:2rem;">Our Projects</h2>
+    <h2 style="color:#d2a06b; margin-bottom:2rem;">Nuestros Proyectos</h2>
     <div class="projects">
       <div class="project-card">
-        <img src="https://source.unsplash.com/400x300/?architecture" alt="Project 1">
-        <h3>Residential Care Project in Paris</h3>
+        <img src="https://source.unsplash.com/400x300/?architecture" alt="Proyecto 1">
+        <h3>Proyecto de Vivienda en París</h3>
       </div>
       <div class="project-card">
-        <img src="https://source.unsplash.com/400x301/?interior" alt="Project 2">
-        <h3>Modern Hotel in London</h3>
+        <img src="https://source.unsplash.com/400x301/?interior" alt="Proyecto 2">
+        <h3>Hotel Moderno en Londres</h3>
       </div>
       <div class="project-card">
-        <img src="https://source.unsplash.com/400x302/?building" alt="Project 3">
-        <h3>Concert Hall in New York</h3>
+        <img src="https://source.unsplash.com/400x302/?building" alt="Proyecto 3">
+        <h3>Sala de Conciertos en Nueva York</h3>
       </div>
     </div>
   </section>
 
   <section class="clients">
-    <h2>Our Clients</h2>
-    <p>Johnson Bank, Metropol, and more...</p>
+    <h2>Nuestros Clientes</h2>
+    <p>Johnson Bank, Metropol, y más...</p>
   </section>
 
   <section class="contact">
-    <h2>Get In Touch</h2>
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Name" required />
-      <input type="email" id="email" placeholder="Email" required />
-      <input type="text" id="phone" placeholder="Phone" />
-      <input type="text" id="company" placeholder="Company" />
-      <textarea id="message" placeholder="Message" required></textarea>
-      <button type="submit">Send</button>
+    <h2>Contáctanos</h2>
+    <form action="https://wa.me/358453400995" method="get" target="_blank">
+      <input type="text" name="name" placeholder="Nombre" required />
+      <input type="email" name="email" placeholder="Correo Electrónico" required />
+      <input type="tel" name="phone" placeholder="Teléfono" />
+      <input type="text" name="company" placeholder="Compañía" />
+      <textarea name="message" placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar</button>
     </form>
   </section>
 
   <footer>
-    &copy; 2025 go.arch. All rights reserved.
+    &copy; 2025 go.arch. Todos los derechos reservados.
   </footer>
-
-  <script>
-    const form = document.getElementById('contactForm');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      const name = encodeURIComponent(document.getElementById('name').value.trim());
-      const email = encodeURIComponent(document.getElementById('email').value.trim());
-      const phone = encodeURIComponent(document.getElementById('phone').value.trim());
-      const company = encodeURIComponent(document.getElementById('company').value.trim());
-      const message = encodeURIComponent(document.getElementById('message').value.trim());
-
-      const text = `Hello, my name is ${name}.\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company}\nMessage: ${message}`;
-
-      // Número de Finlandia, sin espacios ni símbolos, con código país +358
-      const phoneNumber = "358453400995";
-
-      const url = `https://wa.me/${phoneNumber}?text=${text}`;
-
-      window.open(url, '_blank');
-    });
-  </script>
 </body>
 </html>
-
