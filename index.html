@@ -182,12 +182,12 @@
 
   <section class="contact">
     <h2>Get In Touch</h2>
-    <form>
-      <input type="text" placeholder="Name" required />
-      <input type="email" placeholder="Email" required />
-      <input type="text" placeholder="Phone" />
-      <input type="text" placeholder="Company" />
-      <textarea placeholder="Message" required></textarea>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="text" id="phone" placeholder="Phone" />
+      <input type="text" id="company" placeholder="Company" />
+      <textarea id="message" placeholder="Message" required></textarea>
       <button type="submit">Send</button>
     </form>
   </section>
@@ -195,6 +195,28 @@
   <footer>
     &copy; 2025 go.arch. All rights reserved.
   </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const email = encodeURIComponent(document.getElementById('email').value.trim());
+      const phone = encodeURIComponent(document.getElementById('phone').value.trim());
+      const company = encodeURIComponent(document.getElementById('company').value.trim());
+      const message = encodeURIComponent(document.getElementById('message').value.trim());
+
+      const text = `Hello, my name is ${name}.\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company}\nMessage: ${message}`;
+
+      // Número de Finlandia, sin espacios ni símbolos, con código país +358
+      const phoneNumber = "358453400995";
+
+      const url = `https://wa.me/${phoneNumber}?text=${text}`;
+
+      window.open(url, '_blank');
+    });
+  </script>
 </body>
 </html>
 
