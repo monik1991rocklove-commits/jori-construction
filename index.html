@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>go.arch - Arquitectura Moderna</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>go.arch - Modern Architecture</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -20,7 +20,7 @@
     }
 
     header {
-      background: url('https://www.turismofinlandia.es/asuntomessut-feria-vivienda-finlandia-housing-fair/') center/cover no-repeat;
+      background: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29') center/cover no-repeat;
       height: 100vh;
       display: flex;
       flex-direction: column;
@@ -63,14 +63,14 @@
       margin: auto;
     }
 
-    .about, .clients, .contact {
+    .about, .clients, .contact, .services, .testimonials {
       background-color: #1a1a1a;
       margin: 2rem 0;
       border-radius: 10px;
       padding: 2rem;
     }
 
-    .about h2, .clients h2, .contact h2 {
+    .about h2, .clients h2, .contact h2, .services h2, .testimonials h2 {
       color: #d2a06b;
       margin-bottom: 1rem;
     }
@@ -141,59 +141,184 @@
     form button:hover {
       background: #b07e4b;
     }
+
+    /* Servicios list */
+    .services ul {
+      list-style: none;
+      padding-left: 0;
+      color: #eee;
+    }
+
+    .services li {
+      margin-bottom: 0.8rem;
+      padding-left: 1.2rem;
+      position: relative;
+      font-size: 1.1rem;
+    }
+
+    .services li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #d2a06b;
+    }
+
+    /* Testimonios */
+    .testimonial-card {
+      margin-bottom: 1.5rem;
+      font-style: italic;
+      color: #ccc;
+      font-size: 1.1rem;
+    }
+
+    .testimonial-card h4 {
+      margin-top: 0.5rem;
+      font-weight: 700;
+      color: #d2a06b;
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #1ebe57;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+        padding: 0 1rem;
+      }
+
+      header p {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
+
+      form {
+        grid-template-columns: 1fr;
+      }
+
+      form textarea, form button {
+        grid-column: span 1;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Jori Haka — Carpintero y Especialista en Construcción</h1>
-    <p>Brindando artesanía de calidad y soluciones innovadoras en proyectos de construcción y renovación, con experiencia en Finlandia y en el extranjero.</p>
-    <a href="#projects" class="button">Ver Más</a>
+    <h1>Jori Haka — Skilled Carpenter & Construction Specialist</h1>
+    <p>Delivering quality craftsmanship and innovative solutions in building and renovation projects, with experience in Finland and abroad.</p>
+    <a href="#projects" class="button">Look More</a>
   </header>
 
   <section class="about">
-    <h2>Sobre Jori Haka</h2>
-    <p>Con más de diez años de experiencia práctica en construcción, carpintería y reparaciones en el hogar, Jori Haka es un profesional dedicado comprometido a transformar espacios con calidad y precisión. Desde pequeñas reparaciones hasta renovaciones completas, Jori ofrece soluciones confiables que garantizan la durabilidad y funcionalidad de cada proyecto.</p>
-    <p>Experto en mantenimiento, acabado y remodelación, trabaja con gran atención al detalle y adaptabilidad, respondiendo a las necesidades específicas de cada cliente. Su enfoque combina técnicas tradicionales con métodos modernos para ofrecer resultados eficientes y duraderos.</p>
-    <p>Con experiencia en Finlandia y Malta, y comunicación fluida en finlandés, inglés y español, Jori es el socio ideal para cualquier trabajo de construcción o reparación en su hogar.</p>
+    <h2>About Jori Haka</h2>
+    <p>With over ten years of hands-on experience in construction, carpentry, and home repairs, Jori Haka is a dedicated professional committed to transforming spaces with quality and precision. From small repairs to full renovations, Jori provides reliable solutions that ensure the durability and functionality of every project.</p>
+    <p>Expert in maintenance, finishing, and remodeling, he works with great attention to detail and adaptability, responding to the specific needs of each client. His approach combines traditional techniques with modern methods to deliver efficient and long-lasting results.</p>
+    <p>With experience in Finland and Malta, and fluent communication in Finnish, English, and Spanish, Jori is the ideal partner for any construction or repair work in your home.</p>
   </section>
 
   <section id="projects">
-    <h2 style="color:#d2a06b; margin-bottom:2rem;">Nuestros Proyectos</h2>
+    <h2 style="color:#d2a06b; margin-bottom:2rem;">Our Projects</h2>
     <div class="projects">
       <div class="project-card">
-        <img src="https://source.unsplash.com/400x300/?architecture" alt="Proyecto 1">
-        <h3>Proyecto de Vivienda en París</h3>
+        <img src="https://source.unsplash.com/400x300/?architecture" alt="Project 1" />
+        <h3>Residential Care Project in Paris</h3>
       </div>
       <div class="project-card">
-        <img src="https://source.unsplash.com/400x301/?interior" alt="Proyecto 2">
-        <h3>Hotel Moderno en Londres</h3>
+        <img src="https://source.unsplash.com/400x301/?interior" alt="Project 2" />
+        <h3>Modern Hotel in London</h3>
       </div>
       <div class="project-card">
-        <img src="https://source.unsplash.com/400x302/?building" alt="Proyecto 3">
-        <h3>Sala de Conciertos en Nueva York</h3>
+        <img src="https://source.unsplash.com/400x302/?building" alt="Project 3" />
+        <h3>Concert Hall in New York</h3>
       </div>
     </div>
   </section>
 
+  <section class="services">
+    <h2>Servicios</h2>
+    <ul>
+      <li>Carpintería a medida</li>
+      <li>Reparaciones y mantenimiento</li>
+      <li>Renovaciones de interiores</li>
+      <li>Construcción de estructuras</li>
+    </ul>
+  </section>
+
+  <section class="testimonials">
+    <h2>Testimonios</h2>
+    <div class="testimonial-card">
+      <p>"Jori hizo un trabajo increíble remodelando nuestra casa. Profesional y puntual."</p>
+      <h4>- Maria K.</h4>
+    </div>
+    <div class="testimonial-card">
+      <p>"Excelente atención y calidad en cada detalle. Muy recomendable."</p>
+      <h4>- Pekka L.</h4>
+    </div>
+  </section>
+
   <section class="clients">
-    <h2>Nuestros Clientes</h2>
-    <p>Johnson Bank, Metropol, y más...</p>
+    <h2>Our Clients</h2>
+    <p>Johnson Bank, Metropol, and more...</p>
   </section>
 
   <section class="contact">
-    <h2>Contáctanos</h2>
-    <form action="https://wa.me/358453400995" method="get" target="_blank">
-      <input type="text" name="name" placeholder="Nombre" required />
-      <input type="email" name="email" placeholder="Correo Electrónico" required />
-      <input type="tel" name="phone" placeholder="Teléfono" />
-      <input type="text" name="company" placeholder="Compañía" />
-      <textarea name="message" placeholder="Mensaje" required></textarea>
-      <button type="submit">Enviar</button>
+    <h2>Get In Touch</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="text" id="phone" placeholder="Phone" />
+      <input type="text" id="company" placeholder="Company" />
+      <textarea id="message" placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
     </form>
   </section>
 
   <footer>
-    &copy; 2025 go.arch. Todos los derechos reservados.
+    &copy; 2025 go.arch. All rights reserved.
   </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/358453400995" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="40" />
+  </a>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const email = encodeURIComponent(document.getElementById('email').value.trim());
+      const phone = encodeURIComponent(document.getElementById('phone').value.trim());
+      const company = encodeURIComponent(document.getElementById('company').value.trim());
+      const message = encodeURIComponent(document.getElementById('message').value.trim());
+
+      let text = `Name: ${name}%0AEmail: ${email}`;
+      if (phone) text += `%0APhone: ${phone}`;
+      if (company) text += `%0ACompany: ${company}`;
+      text += `%0AMessage: ${message}`;
+
+      const whatsappNumber = '358453400995'; // Finland number without plus sign
+      const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+
+      window.open(url, '_blank');
+    });
+  </script>
 </body>
 </html>
