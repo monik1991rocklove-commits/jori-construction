@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jori Haka - Skilled Carpenter & Construction Specialist</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet" />
+  <title>go.arch - Modern Architecture</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -28,13 +28,11 @@
       align-items: center;
       text-align: center;
       color: white;
-      padding: 0 1rem;
     }
 
     header h1 {
       font-size: 3rem;
       letter-spacing: 2px;
-      max-width: 900px;
     }
 
     header p {
@@ -65,14 +63,14 @@
       margin: auto;
     }
 
-    .about, .clients, .contact, .services, .testimonials, .team, .blog {
+    .about, .clients, .contact {
       background-color: #1a1a1a;
       margin: 2rem 0;
       border-radius: 10px;
       padding: 2rem;
     }
 
-    h2 {
+    .about h2, .clients h2, .contact h2 {
       color: #d2a06b;
       margin-bottom: 1rem;
     }
@@ -83,33 +81,21 @@
       gap: 1.5rem;
     }
 
-    .project-card, .service-card, .testimonial-card, .team-member, .blog-post {
+    .project-card {
       background-color: #222;
       border-radius: 10px;
       overflow: hidden;
-      padding: 1rem;
     }
 
-    .project-card img, .service-card img, .testimonial-card img, .team-member img, .blog-post img {
+    .project-card img {
       width: 100%;
       display: block;
-      border-radius: 10px;
-      margin-bottom: 1rem;
     }
 
-    .project-card h3, .service-card h3, .testimonial-card h3, .team-member h3, .blog-post h3 {
+    .project-card h3 {
+      padding: 1rem;
+      font-size: 1.1rem;
       color: #d2a06b;
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .testimonial-card p {
-      font-style: italic;
-      color: #ccc;
-    }
-
-    .team-member p {
-      color: #ccc;
     }
 
     footer {
@@ -155,19 +141,6 @@
     form button:hover {
       background: #b07e4b;
     }
-
-    /* Responsive tweaks */
-    @media(max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      form {
-        grid-template-columns: 1fr;
-      }
-      form textarea, form button {
-        grid-column: span 1;
-      }
-    }
   </style>
 </head>
 <body>
@@ -184,73 +157,43 @@
     <p>With experience in Finland and Malta, and fluent communication in Finnish, English, and Spanish, Jori is the ideal partner for any construction or repair work in your home.</p>
   </section>
 
-  <section id="services" class="services">
-    <h2>Services</h2>
-    <div class="projects">
-      <div class="service-card">
-        <h3>Carpentry & Woodwork</h3>
-        <p>Custom furniture, cabinetry, and wood repairs tailored to your needs.</p>
-      </div>
-      <div class="service-card">
-        <h3>Home Renovations</h3>
-        <p>From small repairs to complete home transformations.</p>
-      </div>
-      <div class="service-card">
-        <h3>Maintenance & Repairs</h3>
-        <p>Reliable upkeep to keep your property in excellent condition.</p>
-      </div>
-    </div>
-  </section>
-
   <section id="projects">
-    <h2>Our Projects</h2>
+    <h2 style="color:#d2a06b; margin-bottom:2rem;">Our Projects</h2>
     <div class="projects">
       <div class="project-card">
-        <img src="https://source.unsplash.com/400x300/?architecture" alt="Residential Care Project in Paris" />
+        <img src="https://source.unsplash.com/400x300/?architecture" alt="Project 1">
         <h3>Residential Care Project in Paris</h3>
       </div>
       <div class="project-card">
-        <img src="https://source.unsplash.com/400x301/?interior" alt="Modern Hotel in London" />
+        <img src="https://source.unsplash.com/400x301/?interior" alt="Project 2">
         <h3>Modern Hotel in London</h3>
       </div>
       <div class="project-card">
-        <img src="https://source.unsplash.com/400x302/?building" alt="Concert Hall in New York" />
+        <img src="https://source.unsplash.com/400x302/?building" alt="Project 3">
         <h3>Concert Hall in New York</h3>
       </div>
     </div>
   </section>
 
-  <section class="testimonials">
-    <h2>Testimonials</h2>
-    <div class="projects">
-      <div class="testimonial-card">
-        <h3>Anna L.</h3>
-        <p>"Jori did an amazing job renovating our kitchen. Professional, reliable, and skilled."</p>
-      </div>
-      <div class="testimonial-card">
-        <h3>Mark T.</h3>
-        <p>"Great craftsmanship and attention to detail. Highly recommend!"</p>
-      </div>
-      <div class="testimonial-card">
-        <h3>Sarah K.</h3>
-        <p>"Prompt, friendly service with excellent results."</p>
-      </div>
-    </div>
+  <section class="clients">
+    <h2>Our Clients</h2>
+    <p>Johnson Bank, Metropol, and more...</p>
   </section>
 
-  <section class="team">
-    <h2>Meet the Team</h2>
-    <div class="projects">
-      <div class="team-member">
-        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Jori Haka" />
-        <h3>Jori Haka</h3>
-        <p>Founder & Lead Carpenter</p>
-      </div>
-      <div class="team-member">
-        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Team Member" />
-        <h3>Laura M.</h3>
-        <p>Project Manager</p>
-      </div>
-      <div class="team-member">
-        <img src="https
+  <section class="contact">
+    <h2>Get In Touch</h2>
+    <form>
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="text" placeholder="Phone" />
+      <input type="text" placeholder="Company" />
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
 
+  <footer>
+    &copy; 2025 go.arch. All rights reserved.
+  </footer>
+</body>
+</html>
